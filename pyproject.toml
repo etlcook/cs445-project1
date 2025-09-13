@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "p1-hybrid"
+version = "0.1.0"
+description = "CS445 Computational Photography - Hybrid Images Project"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+# Core scientific computing stack
+numpy = "^1.26.0"
+scipy = "^1.11.0"
+matplotlib = "^3.8.0"
+opencv-contrib-python = "^4.8.0"
+ipympl = "^0.9.7"
+pyqt6 = "^6.9.1"
+
+[tool.poetry.group.dev.dependencies]
+# Jupyter ecosystem
+jupyter = "^1.0.0"
+jupyterlab = "^4.0.0"
+ipykernel = "^6.25.0"
+notebook = "^7.0.0"
+# Development tools
+black = "^23.7.0"
+flake8 = "^6.0.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
