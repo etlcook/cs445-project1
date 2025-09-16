@@ -252,16 +252,19 @@ def gaussian_kernel(sigma, kernel_half_size):
 
 def plot(array, filename=None):
     # plots gray images
-    plt.imshow(array, cmap='gray') 
-    plt.axis('off')
+    fig, ax = plt.subplots()
+    ax.imshow(array, cmap='gray') 
+    ax.axis('off')
     if filename:
         array=np.clip(array,0,1)
         array=(array*255).astype(np.uint8)
         cv2.imwrite(filename, array)
+    fig.show()
         
         
 def plot_spectrum(magnitude_spectrum):
     # A logarithmic colormap
-    plt.figure()
-    plt.imshow(magnitude_spectrum, norm=LogNorm(vmin=1/5))
-    plt.colorbar()
+    fig, ax = plt.subplots()
+    ax.imshow(magnitude_spectrum, norm=LogNorm(vmin=1/5))
+    ax.colorbar()
+    fig.show()
